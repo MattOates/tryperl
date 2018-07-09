@@ -6,9 +6,9 @@ $jail::tor = "onion\n"; # With a trailing carriage return
 sub answer($) {
 	my $c = shift;
 	if($c =~ m/^\s*print\s*"\[\$tor\]"\s*$/) { # print "[$tor]"
-		return "Good ! Do you noticed the carriage return at the end ?!\n\r\n\r";
+		return "Good ! Did you notice the carriage return at the end ?!\n\r\n\r";
 	} elsif($c =~ m/^\s*"\[\$tor\]"\s*$/) { # "[$tor]"
-		return "Fine ! Do you noticed the carriage return at the end ?!\n\r\n\r";
+		return "Fine ! Did you notice the carriage return at the end ?!\n\r\n\r";
 	} elsif($c =~ m/^\s*chomp\s*\$tor\s*$/) { # chomp $tor
 		return "SUCCESS !\n\r\n\r";
 	} else {
